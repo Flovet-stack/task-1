@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,500&display=swap');
+
+/* ---------------------------------------------------------------- */
+/*  Author: Flovet Asong
+/* This css design follows the mobile first responsive design approach
+/* The defualt font size is 16px
+/* ---------------------------------------------------------------- */
+:root {
+    --primary: #B00000;
+    --primary-light: #b0000026;
+    --text: #18191F;
+    --text-light: #969BAB;
+    --yellow: #FFE87A;
+    --white: #fff;
+    --bg-light: #F7FAFE;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    list-style-type: none;
+    border: none;
+    outline: none;
+    color: var(--text);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    scroll-behavior: smooth;
+}
+
+/* scrollbar ******************************* */
+body::-webkit-scrollbar {
+    width: 0.6em;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--primary-light);
+    outline: none;
+}
+
+.con {
+    margin: 0 auto;
+}
+
+/* small screens  */
+@media only screen and (max-width: 767px) {
+    .con {
+        width: 90vw !important;
+    }
+}
+/* medium size screens (tablets) */
+@media screen and (min-width: 768px) {
+    .con {
+        width: 90vw;
+    }
+}
+
+/* large screens  */
+@media screen and (min-width: 1225px) {
+    .con {
+        width: 1000px !important;
+    }
+}
+
+/* extra large screens  */
+@media screen and (min-width: 1445px) {
+    .con {
+        width: 1300px !important;
+    }
+}
+
+/* general styles  */
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+h6 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+section {
+    padding: 3em 0;
+}
+
+/* --------------------------------------- */
+/* extra small screens  */
+@media only screen and (max-width: 360px) {}
+
+/* small screens  */
+@media only screen and (max-width: 767px) {}
+
+/* medium size screens (tablets) */
+@media screen and (min-width: 768px) {}
+
+/* large screens  */
+@media screen and (min-width: 1225px) {}
+
+/* extra large screens  */
+@media screen and (min-width: 1445px) {}
