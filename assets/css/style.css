@@ -13,6 +13,9 @@
     --yellow: #FFE87A;
     --white: #fff;
     --bg-light: #F7FAFE;
+    --border-color: #C4C4C4;
+    --light-gray: #D6D4D4;
+    --border-radius: 8px;
 }
 
 * {
@@ -63,6 +66,7 @@ body::-webkit-scrollbar-thumb {
         width: 90vw !important;
     }
 }
+
 /* medium size screens (tablets) */
 @media screen and (min-width: 768px) {
     .con {
@@ -96,9 +100,36 @@ h6 {
     color: var(--text);
 }
 
+h1 {
+    font-size: 2.5em;
+    line-height: 1.3;
+    font-weight: 700;
+}
+h3 {
+    font-size: 2em;
+    line-height: 1.2;
+}
+
+/* medium size screens (tablets)and larger */
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 3.3em;
+    }
+    h3 {
+        font-size: 2.5em;
+    }
+}
+
+/* large size screens and larger */
+@media screen and (min-width: 1225px) {
+    h1 {
+        font-size: 4em !important;
+    }
+}
+
 p {
     font-size: 1em;
-    line-height: 1.5;
+    line-height: 2;
     margin: 0;
 }
 
@@ -114,18 +145,349 @@ section {
     padding: 3em 0;
 }
 
+
+/* button styles  */
+.btn {
+    display: block;
+    padding: .5em 1em;
+    border-radius: var(--border-radius);
+    width: fit-content;
+    font-size: 1em;
+}
+
+.btn.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+    border: 1px solid var(--primary);
+}
+
+.btn.btn-primary:hover {
+    background-color: var(--text);
+    border: 1px solid var(--text);
+}
+
+.btn.btn-border {
+    background-color: var(--white);
+    color: var(--text);
+    border: 1px solid var(--text);
+}
+
+.btn.btn-border:hover {
+    background-color: var(--text);
+    color: var(--white);
+    border: 1px solid var(--text);
+}
+
+/* header styles  */
+header {
+    display: none;
+}
+
+/* start of home hero styles  */
+.hero {
+    margin-top: 100px;
+    margin-bottom: 3em;
+}
+
+.hero .sec-1 {
+    width: 100%;
+}
+
+.hero nav {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.hero nav ul {
+    width: fit-content;
+    display: flex;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.hero nav li {
+    padding: .3em 1em;
+    color: var(--light-gray);
+    position: relative;
+    display: block;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* extra small screens and larger */
+@media only screen and (max-width: 360px) {
+    .hero nav li {
+        padding: .3em .5em;
+    }
+}
+
+.hero nav li::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--light-gray);
+}
+
+.hero nav li.active,
+.hero nav li.active:hover {
+    color: var(--primary);
+}
+
+.hero nav li.active::after,
+.hero nav li.active:hover:after {
+    background-color: var(--primary);
+}
+
+.hero nav li:hover {
+    color: var(--primary-light);
+}
+
+.hero nav li:hover::after {
+    background-color: var(--primary-light);
+}
+
+/* large size screens and larger */
+@media screen and (min-width: 1225px) {
+    .hero .con {
+        display: flex;
+    }
+}
+
+.hero .sec-1 .content {
+    width: 100%;
+}
+
+.hero .sec-1 .content h1 { 
+    margin-bottom: 1rem;
+}
+
+.hero .sec-1 .content p {
+    font-size: 1em;
+    color: var(--text-light);
+    margin-bottom: 1em;
+}
+
+.hero .sec-1 .content .btns {
+    width: 100%;
+}
+
+.hero .sec-1 .content .btns .btn {
+    width: 100%;
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+/* medium size screens (tablets)and larger */
+@media screen and (min-width: 768px) {
+    .hero .sec-1 .content h1 {
+        font-size: 3.3em;
+    }
+
+    .hero .sec-1 .content p {
+        width: 60%;
+    }
+
+    .hero .sec-1 .content .btns {
+        display: flex;
+    }
+
+    .hero .sec-1 .content .btns .btn {
+        margin-bottom: 0;
+        margin-right: 1em;
+        width: fit-content;
+    }
+}
+
+/* large size screens and larger */
+@media screen and (min-width: 1225px) {
+    .hero .sec-1 {
+        width: 60%;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero .sec-1 .content h1 {
+        width: 80%;
+    }
+}
+
+.hero .sec-2 {
+    width: 100%;
+    margin-top: 2em;
+    position: relative;
+}
+
+.hero .sec-2 img {
+    width: 100%;
+}
+
+.hero .sec-2 img.abstract {
+    position: absolute;
+}
+
+.hero .sec-2 img.abstract.img-1 {
+    left: -15px;
+    top: 60%;
+    width: 30px;
+}
+
+.hero .sec-2 img.abstract.img-2 {
+    right: -10px;
+    top: 10%;
+    width: 30px;
+}
+
+.hero .sec-2 img.abstract.img-3 {
+    right: -15px;
+    top: 80%;
+    width: 50px;
+}
+
+/* medium size screens (tablets)and larger */
+@media screen and (min-width: 768px) {
+    .hero .sec-2 {
+        width: 100%;
+        height: 300px;
+    }
+    .hero .sec-2 img:first-child {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* large size screens and larger */
+@media screen and (min-width: 1225px) {
+    .hero .sec-2 {
+        width: 40%;
+        height: auto;
+    }
+}
+
+/* end of home hero styles  */
+
+
+
+/* start of the hosting section styles  */
+.hosting-section {
+    padding-bottom: 0;
+}
+.hosting-section .content {
+    width: 100%;
+    padding-bottom: 0;
+}
+.hosting-section .content h3 {
+    margin-bottom: 1rem;
+}
+.hosting-section .content p {
+    font-size: 1em;
+}
+.hosting-section .logos {
+    width: 100%;
+    margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.hosting-section .logos img {
+    width: 30%;
+    height: fit-content;
+    margin-bottom: 1em;
+}
+/* medium size screens (tablets)and larger */
+@media screen and (min-width: 768px) {
+    .hosting-section .logos {
+        justify-content: flex-start;
+    }
+    .hosting-section .logos img {
+        width: auto;
+        margin: 0 1rem;
+        margin-bottom: 1em;
+    }
+}
+
+/* large screens and larger */
+@media screen and (min-width: 1225px) {
+    .hosting-section .con {
+        display: flex;
+    }
+    .hosting-section .con .content {
+        width: 55%;
+    }
+    .hosting-section .content p {
+        width: 90%;
+    }
+    .hosting-section .logos {
+        width: 45%;
+        justify-content: flex-start;
+    }
+    .hosting-section .logos img {
+        width: auto;
+        margin: 0 1rem;
+        margin-bottom: 1em;
+    }
+}
+/* end of the hosting section styles  */
+
+/* start of the benefits section styles  */
+.benefits-section .con .item {
+    width: 100%;
+    margin-bottom: 2em;
+}
+.benefits-section .con .item img {
+    width: 80px;
+    margin-bottom: .5rem;
+}
+.benefits-section .con .item h5 {
+    font-size: 1.5em;
+    margin-bottom: .3em;
+}
+.benefits-section .con .item p {
+    font-size: 1em;
+}
+/* medium size screens (tablets)and larger */
+@media screen and (min-width: 768px) {
+    .benefits-section .con {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em
+    }
+}
+
+/* large screens and larger */
+@media screen and (min-width: 1225px) {
+    .benefits-section .con {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2em
+    }
+    .benefits-section .con .item {
+        text-align: center;
+    }
+    .benefits-section .con .item h5 {
+        font-size: 1.3em;
+    }
+    .benefits-section .con .item p {
+        font-size: .9em;
+    }
+}
+
+/* end of the benefits section styles  */
+
 /* --------------------------------------- */
-/* extra small screens  */
+/* extra small screens and larger */
 @media only screen and (max-width: 360px) {}
 
-/* small screens  */
+/* small screens and larger */
 @media only screen and (max-width: 767px) {}
 
-/* medium size screens (tablets) */
+/* medium size screens (tablets)and larger */
 @media screen and (min-width: 768px) {}
 
-/* large screens  */
+/* large screens and larger */
 @media screen and (min-width: 1225px) {}
 
-/* extra large screens  */
+/* extra large screens and larger */
 @media screen and (min-width: 1445px) {}
