@@ -56,6 +56,11 @@ body::-webkit-scrollbar-thumb {
     outline: none;
 }
 
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary);
+    outline: none;
+}
+
 .con {
     margin: 0 auto;
 }
@@ -105,6 +110,12 @@ h1 {
     line-height: 1.3;
     font-weight: 700;
 }
+
+h2 {
+    font-size: 2.3em;
+    line-height: 1.2;
+}
+
 h3 {
     font-size: 2em;
     line-height: 1.2;
@@ -115,6 +126,11 @@ h3 {
     h1 {
         font-size: 3.3em;
     }
+
+    h2 {
+        font-size: 3.1em;
+    }
+
     h3 {
         font-size: 2.5em;
     }
@@ -124,6 +140,10 @@ h3 {
 @media screen and (min-width: 1225px) {
     h1 {
         font-size: 4em !important;
+    }
+
+    h2 {
+        font-size: 3.8em;
     }
 }
 
@@ -144,6 +164,20 @@ a:hover {
 section {
     padding: 3em 0;
 }
+
+/* extra small screens and larger */
+@media only screen and (max-width: 360px) {
+    section {
+        padding: 2em 0;
+    }
+}
+
+@media screen and (min-width: 1225px) {
+    section {
+        padding: 5em 0;
+    }
+}
+
 
 
 /* button styles  */
@@ -260,7 +294,7 @@ header {
     width: 100%;
 }
 
-.hero .sec-1 .content h1 { 
+.hero .sec-1 .content h1 {
     margin-bottom: 1rem;
 }
 
@@ -352,6 +386,7 @@ header {
         width: 100%;
         height: 300px;
     }
+
     .hero .sec-2 img:first-child {
         height: 100%;
         object-fit: cover;
@@ -368,22 +403,24 @@ header {
 
 /* end of home hero styles  */
 
-
-
 /* start of the hosting section styles  */
 .hosting-section {
     padding-bottom: 0;
 }
+
 .hosting-section .content {
     width: 100%;
     padding-bottom: 0;
 }
+
 .hosting-section .content h3 {
     margin-bottom: 1rem;
 }
+
 .hosting-section .content p {
     font-size: 1em;
 }
+
 .hosting-section .logos {
     width: 100%;
     margin-top: 2em;
@@ -391,16 +428,19 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 .hosting-section .logos img {
     width: 30%;
     height: fit-content;
     margin-bottom: 1em;
 }
+
 /* medium size screens (tablets)and larger */
 @media screen and (min-width: 768px) {
     .hosting-section .logos {
         justify-content: flex-start;
     }
+
     .hosting-section .logos img {
         width: auto;
         margin: 0 1rem;
@@ -413,22 +453,27 @@ header {
     .hosting-section .con {
         display: flex;
     }
+
     .hosting-section .con .content {
         width: 55%;
     }
+
     .hosting-section .content p {
         width: 90%;
     }
+
     .hosting-section .logos {
         width: 45%;
         justify-content: flex-start;
     }
+
     .hosting-section .logos img {
         width: auto;
         margin: 0 1rem;
         margin-bottom: 1em;
     }
 }
+
 /* end of the hosting section styles  */
 
 /* start of the benefits section styles  */
@@ -436,17 +481,25 @@ header {
     width: 100%;
     margin-bottom: 2em;
 }
+
 .benefits-section .con .item img {
     width: 80px;
     margin-bottom: .5rem;
 }
+
 .benefits-section .con .item h5 {
     font-size: 1.5em;
     margin-bottom: .3em;
 }
+
 .benefits-section .con .item p {
     font-size: 1em;
 }
+
+.benefits-section .con .item:last-child {
+    margin-bottom: 0;
+}
+
 /* medium size screens (tablets)and larger */
 @media screen and (min-width: 768px) {
     .benefits-section .con {
@@ -463,18 +516,482 @@ header {
         grid-template-columns: repeat(4, 1fr);
         gap: 2em
     }
+
     .benefits-section .con .item {
         text-align: center;
     }
+
     .benefits-section .con .item h5 {
         font-size: 1.3em;
     }
+
     .benefits-section .con .item p {
         font-size: .9em;
     }
 }
 
 /* end of the benefits section styles  */
+
+
+/* start of the websites section styles  */
+.websites-section {
+    padding-bottom: 0;
+}
+
+.websites-section .content {
+    width: 100%;
+    padding-bottom: 0;
+}
+
+.websites-section .content h2 {
+    margin-bottom: 1rem;
+}
+
+.websites-section .content p {
+    font-size: 1em;
+}
+
+.websites-section .logos {
+    width: 100%;
+    margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.websites-section .logos img {
+    width: 30%;
+    height: fit-content;
+}
+
+/* medium size screens (tablets)and larger */
+@media screen and (min-width: 768px) {
+    .websites-section .logos {
+        justify-content: flex-start;
+    }
+
+    .websites-section .logos img {
+        width: auto;
+        margin: 0 1rem;
+    }
+}
+
+/* large screens and larger */
+@media screen and (min-width: 1225px) {
+    .websites-section .con {
+        display: flex;
+    }
+
+    .websites-section .con .content {
+        width: 55%;
+    }
+
+    .websites-section .content p {
+        width: 90%;
+    }
+
+    .websites-section .logos {
+        width: 45%;
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+
+    .websites-section .logos img {
+        width: auto;
+        margin: 0 1rem;
+    }
+}
+
+/* end of the websites section styles  */
+
+/* start of the jumbotron  */
+.jumbotron {
+    text-align: center;
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius);
+    padding: 3em 0;
+    position: relative;
+}
+
+.jumbotron h1 {
+    margin-bottom: 1em;
+}
+
+.jumbotron .btn {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.jumbotron .btn img {
+    margin-right: .5em;
+}
+
+.jumbotron>img.abstract {
+    position: absolute;
+}
+
+.jumbotron>img.abstract.img-1 {
+    left: -15px;
+    top: 60%;
+    width: 30px;
+}
+
+.jumbotron>img.abstract.img-2 {
+    right: 60%;
+    top: -8px;
+    width: 30px;
+}
+
+.jumbotron>img.abstract.img-3 {
+    right: -15px;
+    top: 80%;
+    width: 50px;
+}
+
+/* medium size screens (tablets)and larger */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        padding: 3em;
+    }
+}
+
+/* end of the jumbotron  */
+
+/* start of the footer styles  */
+footer {
+    padding: 2rem 0;
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+footer .con .sec-1 {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+footer .con .sec-1 .logo {
+    width: 150px;
+    margin-bottom: 1em;
+}
+
+footer .con .sec-1 p {
+    font-size: 1em;
+    color: var(--white);
+}
+
+footer .con .sec-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+}
+
+footer .con .sec-2 .sub {
+    width: 100%;
+    color: var(--white);
+    margin-bottom: 2em;
+}
+
+footer .con .sec-2 .sub .title {
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 1em;
+    color: var(--white);
+}
+
+footer .con .sec-2 .sub ul li {
+    margin-bottom: .5em;
+}
+
+footer .con .sec-2 .sub ul a {
+    color: var(--white);
+    font-size: 1em;
+}
+
+footer .con .sec-2 .sub ul a:hover {
+    text-decoration: underline;
+}
+
+footer .footer-bottom .con p {
+    color: var(--white);
+    line-height: 1.3;
+}
+
+footer .footer-bottom .con p span {
+    color: var(--white);
+    font-size: 1.5em;
+}
+
+/* large screens and larger */
+@media screen and (min-width: 1225px) {
+    footer {
+        padding: 3em 0;
+    }
+
+    footer .con {
+        display: flex;
+    }
+
+    footer .con .sec-1 {
+        width: 40%;
+        margin-bottom: 0;
+    }
+
+    footer .con .sec-1 p {
+        width: 80%;
+    }
+
+    footer .con .sec-2 {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer .con .sec-2 .sub .title {
+        margin-bottom: 2em;
+    }
+
+    footer .con .sec-2 .sub ul li {
+        margin-bottom: 1em;
+    }
+
+    footer .footer-bottom {
+        margin-top: 2em;
+    }
+}
+
+/* end of the footer styles  */
+
+/* start of the testimony styles  */
+.testimonies-section {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--sky-green);
+    padding: 5em 0;
+}
+
+.testimonies-sub {
+    widows: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: red; */
+}
+
+.testimonies-sub .sec-1 {
+    width: 50%;
+    height: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-end;
+}
+
+.testimonies-sub .sec-2 {
+    width: 50%;
+    height: inherit;
+    display: grid;
+    align-content: center;
+    justify-content: flex-end;
+}
+
+.top {
+    width: 100%;
+    margin-bottom: 2em;
+    position: relative;
+}
+
+.top img {
+    position: absolute;
+    opacity: .4;
+}
+
+.top h1 {
+    margin-left: 5rem;
+    padding-top: 3rem;
+}
+
+.top p {
+    margin-left: 5rem;
+}
+
+.testimony {
+    width: fit-content;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.07);
+}
+
+.testimony .user {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.testimony .user img {
+    width: 100px;
+    height: auto;
+    margin-right: 1em;
+}
+
+.testimony .content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.testimony .content img {
+    width: 30px;
+    opacity: .5;
+    margin-right: 1rem;
+}
+
+.testimony .description {
+    width: fit-content;
+    margin-left: calc(30px + 1rem);
+    margin-top: 1em;
+}
+
+.testimony .description h5 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.testimony .description p {
+    font-size: .9rem;
+    font-weight: 400;
+    color: var(--text-light);
+}
+
+.sec-1 .testimony {
+    margin-right: 2em;
+    width: 60%;
+    align-self: flex-end;
+}
+
+.sec-2 .testimony:first-child {
+    width: 80%;
+    margin-bottom: 2em;
+    margin-top: 8rem;
+}
+
+.sec-2 .testimony:last-child {
+    width: 60%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .testimonies-sub .sec-1 {
+        width: 100%;
+    }
+
+    .testimonies-sub .sec-2 {
+        width: 100%;
+    }
+
+    .testimony {
+        margin-bottom: 2em;
+    }
+
+    .sec-1 .testimony {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .sec-2 .testimony:first-child {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .sec-2 .testimony:last-child {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .testimonies-section {
+        padding: 3em 0;
+    }
+
+    .testimonies-sub .sec-1 {
+        width: 100%;
+    }
+
+    .testimonies-sub .sec-2 {
+        width: 100%;
+    }
+
+    .top {
+        width: 100%;
+        margin-bottom: 2em;
+        position: relative;
+    }
+
+    .top img {
+        width: 100px;
+    }
+
+    .top h1 {
+        margin-left: 2rem;
+        padding-top: 2rem;
+    }
+
+    .top p {
+        margin-left: 2rem;
+    }
+
+    .testimony {
+        margin-bottom: 2em;
+    }
+
+    .testimony .user {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 1.3em;
+        font-weight: 800;
+        margin-bottom: 1rem;
+    }
+
+    .testimony .user img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .testimony .content img {
+        width: 20px;
+        margin-right: .5rem;
+    }
+
+    .testimony .description {
+        margin-left: calc(20px + .5rem);
+    }
+
+    .sec-1 .testimony {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .sec-2 .testimony:first-child {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .sec-2 .testimony:last-child {
+        width: 100%;
+    }
+
+}
+
+
+/* start of the pricing section styles  */
+/* end of the pricing section styles  */
+
 
 /* --------------------------------------- */
 /* extra small screens and larger */
