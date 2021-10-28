@@ -1118,6 +1118,9 @@ footer .footer-bottom .con p span {
     left: 0;
 }
 
+.pricing-section .toggler-con .toggler.toggle .toggler-sub {
+    left: calc(100% - 30px);
+}
 .pricing-section .toggler-con .time {
     font-size: 1.1em;
 }
@@ -1176,6 +1179,15 @@ footer .footer-bottom .con p span {
     background-color: var(--primary-light);
 }
 
+#annually {
+    display: none;
+}
+.pricing-section .content-sub {
+    display: none;
+}
+.pricing-section .content-sub.active {
+    display: block;
+}
 .pricing-section .plans .plan {
     width: 100%;
     height: auto;

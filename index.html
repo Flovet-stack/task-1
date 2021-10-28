@@ -205,86 +205,317 @@
         </div>
         <div class="toggler-con">
           <div class="time">Monthly</div>
-          <div class="toggler">
+          <div class="toggler" id="plan-toggler">
             <div class="toggler-sub"></div>
           </div>
           <div class="time">Annual</div>
         </div>
-        <nav>
-          <ul>
-            <li class="active">Basic</li>
-            <li>Premium</li>
-          </ul>
-        </nav>
-        <div class="plans">
-          <div class="plan">
-            <h4>Starter</h4>
-            <p>
-              with all your customers via all conversation channels in one
-              central dashboard.
-            </p>
-            <div class="price">
-              <h3>$2.80</h3>
-              <p>per month</p>
-            </div>
-            <a href="" class="btn btn-border">Choose this plan</a>
+        <div id="monthly">
+          <nav>
             <ul>
-              <li>2GB SSD</li>
-              <li>10GB Bandwidth</li>
-              <li>15 Email Accounts</li>
-              <li>Unlimited Database</li>
-              <li>4 Subdomains</li>
-              <li>1 Parked Domain</li>
-              <li>2 websites</li>
-              <li>Free SSL</li>
-              <li>Softaculous</li>
+              <li data-to="monthly-basic" class="tab active">Basic</li>
+              <li data-to="monthly-premium" class="tab">Premium</li>
             </ul>
+          </nav>
+          <div class="content-sub active" id="monthly-basic">
+            <div class="plans">
+              <div class="plan">
+                <h4>Starter</h4>
+                <p>
+                  with all your customers via all conversation channels in one
+                  central dashboard.
+                </p>
+                <div class="price">
+                  <h3>$2.80</h3>
+                  <p>per month</p>
+                </div>
+                <a href="" class="btn btn-border">Choose this plan</a>
+                <ul>
+                  <li>2GB SSD</li>
+                  <li>10GB Bandwidth</li>
+                  <li>15 Email Accounts</li>
+                  <li>Unlimited Database</li>
+                  <li>4 Subdomains</li>
+                  <li>1 Parked Domain</li>
+                  <li>2 websites</li>
+                  <li>Free SSL</li>
+                  <li>Softaculous</li>
+                </ul>
+              </div>
+              <div class="plan">
+                <h4>Standard</h4>
+                <p>
+                  with all your customers via all conversation channels in one
+                  central dashboard.
+                </p>
+                <div class="price">
+                  <h3>$4.20</h3>
+                  <p>per month</p>
+                </div>
+                <a href="" class="btn btn-border">Choose this plan</a>
+                <ul>
+                  <li>2GB SSD</li>
+                  <li>10GB Bandwidth</li>
+                  <li>15 Email Accounts</li>
+                  <li>Unlimited Database</li>
+                  <li>4 Subdomains</li>
+                  <li>1 Parked Domain</li>
+                  <li>2 websites</li>
+                  <li>Free SSL</li>
+                  <li>Softaculous</li>
+                </ul>
+              </div>
+              <div class="plan">
+                <h4>Suprem</h4>
+                <p>
+                  with all your customers via all conversation channels in one
+                  central dashboard.
+                </p>
+                <div class="price">
+                  <h3>$7.00</h3>
+                  <p>per month</p>
+                </div>
+                <a href="" class="btn btn-border">Choose this plan</a>
+                <ul>
+                  <li>2GB SSD</li>
+                  <li>10GB Bandwidth</li>
+                  <li>15 Email Accounts</li>
+                  <li>Unlimited Database</li>
+                  <li>4 Subdomains</li>
+                  <li>1 Parked Domain</li>
+                  <li>2 websites</li>
+                  <li>Free SSL</li>
+                  <li>Softaculous</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="plan">
-            <h4>Standard</h4>
-            <p>
-              with all your customers via all conversation channels in one
-              central dashboard.
-            </p>
-            <div class="price">
-              <h3>$4.20</h3>
-              <p>per month</p>
+          <div class="content-sub" id="monthly-premium">
+            <div class="plans">
+              <div class="plan">
+                <h4>Starter</h4>
+                <p>
+                  with all your customers via all conversation channels in one
+                  central dashboard.
+                </p>
+                <div class="price">
+                  <h3>$4.16</h3>
+                  <p>per month</p>
+                </div>
+                <a href="" class="btn btn-border">Choose this plan</a>
+                <ul>
+                  <li>2GB SSD</li>
+                  <li>10GB Bandwidth</li>
+                  <li>15 Email Accounts</li>
+                  <li>Unlimited Database</li>
+                  <li>4 Subdomains</li>
+                  <li>1 Parked Domain</li>
+                  <li>2 websites</li>
+                  <li>Free SSL</li>
+                  <li>Softaculous</li>
+                </ul>
+              </div>
+              <div class="plan">
+                <h4>Standard</h4>
+                <p>
+                  with all your customers via all conversation channels in one
+                  central dashboard.
+                </p>
+                <div class="price">
+                  <h3>$8.40</h3>
+                  <p>per month</p>
+                </div>
+                <a href="" class="btn btn-border">Choose this plan</a>
+                <ul>
+                  <li>2GB SSD</li>
+                  <li>10GB Bandwidth</li>
+                  <li>15 Email Accounts</li>
+                  <li>Unlimited Database</li>
+                  <li>4 Subdomains</li>
+                  <li>1 Parked Domain</li>
+                  <li>2 websites</li>
+                  <li>Free SSL</li>
+                  <li>Softaculous</li>
+                </ul>
+              </div>
+              <div class="plan">
+                <h4>Suprem</h4>
+                <p>
+                  with all your customers via all conversation channels in one
+                  central dashboard.
+                </p>
+                <div class="price">
+                  <h3>$14.00</h3>
+                  <p>per month</p>
+                </div>
+                <a href="" class="btn btn-border">Choose this plan</a>
+                <ul>
+                  <li>2GB SSD</li>
+                  <li>10GB Bandwidth</li>
+                  <li>15 Email Accounts</li>
+                  <li>Unlimited Database</li>
+                  <li>4 Subdomains</li>
+                  <li>1 Parked Domain</li>
+                  <li>2 websites</li>
+                  <li>Free SSL</li>
+                  <li>Softaculous</li>
+                </ul>
+              </div>
             </div>
-            <a href="" class="btn btn-border">Choose this plan</a>
-            <ul>
-              <li>2GB SSD</li>
-              <li>10GB Bandwidth</li>
-              <li>15 Email Accounts</li>
-              <li>Unlimited Database</li>
-              <li>4 Subdomains</li>
-              <li>1 Parked Domain</li>
-              <li>2 websites</li>
-              <li>Free SSL</li>
-              <li>Softaculous</li>
-            </ul>
           </div>
-          <div class="plan">
-            <h4>Suprem</h4>
-            <p>
-              with all your customers via all conversation channels in one
-              central dashboard.
-            </p>
-            <div class="price">
-              <h3>$7.00</h3>
-              <p>per month</p>
-            </div>
-            <a href="" class="btn btn-border">Choose this plan</a>
+        </div>
+        <div id="annually">
+          <nav>
             <ul>
-              <li>2GB SSD</li>
-              <li>10GB Bandwidth</li>
-              <li>15 Email Accounts</li>
-              <li>Unlimited Database</li>
-              <li>4 Subdomains</li>
-              <li>1 Parked Domain</li>
-              <li>2 websites</li>
-              <li>Free SSL</li>
-              <li>Softaculous</li>
+              <li data-to="annual-basic" class="tab active">Basic</li>
+              <li data-to="annual-premium" class="tab">Premium</li>
             </ul>
+          </nav>
+          <div class="content-sub active" id="annual-basic">
+            <div class="plans">
+              <div class="plan">
+                <h4>Starter</h4>
+                <p>
+                  with all your customers via all conversation channels in one
+                  central dashboard.
+                </p>
+                <div class="price">
+                  <h3>$22.80</h3>
+                  <p>per month</p>
+                </div>
+                <a href="" class="btn btn-border">Choose this plan</a>
+                <ul>
+                  <li>2GB SSD</li>
+                  <li>10GB Bandwidth</li>
+                  <li>15 Email Accounts</li>
+                  <li>Unlimited Database</li>
+                  <li>4 Subdomains</li>
+                  <li>1 Parked Domain</li>
+                  <li>2 websites</li>
+                  <li>Free SSL</li>
+                  <li>Softaculous</li>
+                </ul>
+              </div>
+              <div class="plan">
+                <h4>Standard</h4>
+                <p>
+                  with all your customers via all conversation channels in one
+                  central dashboard.
+                </p>
+                <div class="price">
+                  <h3>$44.20</h3>
+                  <p>per month</p>
+                </div>
+                <a href="" class="btn btn-border">Choose this plan</a>
+                <ul>
+                  <li>2GB SSD</li>
+                  <li>10GB Bandwidth</li>
+                  <li>15 Email Accounts</li>
+                  <li>Unlimited Database</li>
+                  <li>4 Subdomains</li>
+                  <li>1 Parked Domain</li>
+                  <li>2 websites</li>
+                  <li>Free SSL</li>
+                  <li>Softaculous</li>
+                </ul>
+              </div>
+              <div class="plan">
+                <h4>Suprem</h4>
+                <p>
+                  with all your customers via all conversation channels in one
+                  central dashboard.
+                </p>
+                <div class="price">
+                  <h3>$77.00</h3>
+                  <p>per month</p>
+                </div>
+                <a href="" class="btn btn-border">Choose this plan</a>
+                <ul>
+                  <li>2GB SSD</li>
+                  <li>10GB Bandwidth</li>
+                  <li>15 Email Accounts</li>
+                  <li>Unlimited Database</li>
+                  <li>4 Subdomains</li>
+                  <li>1 Parked Domain</li>
+                  <li>2 websites</li>
+                  <li>Free SSL</li>
+                  <li>Softaculous</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="content-sub" id="annual-premium">
+            <div class="plans">
+              <div class="plan">
+                <h4>Starter</h4>
+                <p>
+                  with all your customers via all conversation channels in one
+                  central dashboard.
+                </p>
+                <div class="price">
+                  <h3>$144.16</h3>
+                  <p>per month</p>
+                </div>
+                <a href="" class="btn btn-border">Choose this plan</a>
+                <ul>
+                  <li>2GB SSD</li>
+                  <li>10GB Bandwidth</li>
+                  <li>15 Email Accounts</li>
+                  <li>Unlimited Database</li>
+                  <li>4 Subdomains</li>
+                  <li>1 Parked Domain</li>
+                  <li>2 websites</li>
+                  <li>Free SSL</li>
+                  <li>Softaculous</li>
+                </ul>
+              </div>
+              <div class="plan">
+                <h4>Standard</h4>
+                <p>
+                  with all your customers via all conversation channels in one
+                  central dashboard.
+                </p>
+                <div class="price">
+                  <h3>$188.40</h3>
+                  <p>per month</p>
+                </div>
+                <a href="" class="btn btn-border">Choose this plan</a>
+                <ul>
+                  <li>2GB SSD</li>
+                  <li>10GB Bandwidth</li>
+                  <li>15 Email Accounts</li>
+                  <li>Unlimited Database</li>
+                  <li>4 Subdomains</li>
+                  <li>1 Parked Domain</li>
+                  <li>2 websites</li>
+                  <li>Free SSL</li>
+                  <li>Softaculous</li>
+                </ul>
+              </div>
+              <div class="plan">
+                <h4>Suprem</h4>
+                <p>
+                  with all your customers via all conversation channels in one
+                  central dashboard.
+                </p>
+                <div class="price">
+                  <h3>$177.00</h3>
+                  <p>per month</p>
+                </div>
+                <a href="" class="btn btn-border">Choose this plan</a>
+                <ul>
+                  <li>2GB SSD</li>
+                  <li>10GB Bandwidth</li>
+                  <li>15 Email Accounts</li>
+                  <li>Unlimited Database</li>
+                  <li>4 Subdomains</li>
+                  <li>1 Parked Domain</li>
+                  <li>2 websites</li>
+                  <li>Free SSL</li>
+                  <li>Softaculous</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
