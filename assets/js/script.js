@@ -20,7 +20,7 @@ let showContent = (target, content) => { //function to show specific targeted co
 // show specific content on click
 tabs.forEach(tab => {
     tab.addEventListener('click', (e) => {
-        const content = document.getElementById(e.target.getAttribute('to'));
+        const content = document.getElementById(e.target.getAttribute('data-to'));
         showContent(e.target, content);
     });
 });
