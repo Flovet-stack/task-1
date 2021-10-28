@@ -613,8 +613,24 @@ header {
     position: relative;
 }
 
-.jumbotron h1 {
+.jumbotron .text {
+    font-size: 2.5em;
+    line-height: 1.3;
+    font-weight: 700;
     margin-bottom: 1em;
+}
+/* medium size screens (tablets)and larger */
+@media screen and (min-width: 768px) {
+    .jumbotron .text {
+        font-size: 3.3em;
+    }
+}
+
+/* large size screens and larger */
+@media screen and (min-width: 1225px) {
+    .jumbotron .text {
+        font-size: 4em !important;
+    }
 }
 
 .jumbotron .btn {
@@ -805,7 +821,7 @@ footer .footer-bottom .con p span {
     opacity: .4;
 }
 
-.top h1 {
+.top h2 {
     margin-left: 5rem;
     padding-top: 3rem;
 }
