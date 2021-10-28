@@ -186,6 +186,36 @@ section {
 }
 
 
+/* animations  */
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.fade-out {
+    animation: fade-out 1s ease-out both;
+}
+
 
 /* button styles  */
 .btn {
@@ -234,18 +264,18 @@ header {
     width: 100%;
 }
 
-.hero nav {
+.hero .nav {
     width: 100%;
     margin-bottom: 2em;
 }
 
-.hero nav ul {
+.hero .nav ul {
     width: fit-content;
     display: flex;
     border-bottom: 2px solid var(--light-gray);
 }
 
-.hero nav li {
+.hero .nav li {
     padding: .3em 1em;
     color: var(--light-gray);
     position: relative;
@@ -256,12 +286,12 @@ header {
 
 /* extra small screens and larger */
 @media only screen and (max-width: 360px) {
-    .hero nav li {
+    .hero .nav li {
         padding: .3em .5em;
     }
 }
 
-.hero nav li::after {
+.hero .nav li::after {
     content: '';
     display: block;
     position: absolute;
@@ -272,33 +302,42 @@ header {
     background-color: var(--light-gray);
 }
 
-.hero nav li.active,
-.hero nav li.active:hover {
+.hero .nav li.active,
+.hero .nav li.active:hover {
     color: var(--primary);
 }
 
-.hero nav li.active::after,
-.hero nav li.active:hover:after {
+.hero .nav li.active::after,
+.hero .nav li.active:hover:after {
     background-color: var(--primary);
 }
 
-.hero nav li:hover {
+.hero .nav li:hover {
     color: var(--primary-light);
 }
 
-.hero nav li:hover::after {
+.hero .nav li:hover::after {
     background-color: var(--primary-light);
 }
 
-/* large size screens and larger */
-@media screen and (min-width: 1225px) {
-    .hero .con {
-        display: flex;
-    }
+.hero .sec-1 {
+    position: relative;
 }
 
 .hero .sec-1 .content {
     width: 100%;
+    height: fit-content;
+}
+
+.hero .sec-1 .content .content-sub {
+    width: 100%;
+    display: none;
+}
+
+.hero .sec-1 .content .content-sub.active {
+    opacity: 1;
+    z-index: 2;
+    display: block;
 }
 
 .hero .sec-1 .content h1 {
@@ -344,10 +383,16 @@ header {
 
 /* large size screens and larger */
 @media screen and (min-width: 1225px) {
+    .hero .con {
+        display: flex;
+    }
+
+    .hero nav {
+        margin-top: 2em;
+    }
+
     .hero .sec-1 {
         width: 60%;
-        display: flex;
-        align-items: center;
     }
 
     .hero .sec-1 .content h1 {
@@ -363,6 +408,7 @@ header {
 
 .hero .sec-2 img {
     width: 100%;
+    /* display: none; */
 }
 
 .hero .sec-2 img.abstract {
@@ -405,6 +451,7 @@ header {
     .hero .sec-2 {
         width: 40%;
         height: auto;
+        margin: 0;
     }
 }
 
@@ -1102,6 +1149,7 @@ footer .footer-bottom .con p span {
 .pricing-section nav li:hover {
     background-color: var(--primary-light);
 }
+
 .pricing-section nav li::after {
     content: '';
     display: block;
@@ -1185,6 +1233,7 @@ footer .footer-bottom .con p span {
         top: 50%;
         transform: translate(0%, -50%);
     }
+
     .pricing-section .plans {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -1197,6 +1246,7 @@ footer .footer-bottom .con p span {
     .pricing-section .toggler-con .time {
         font-size: 1.3em;
     }
+
     .pricing-section .plans {
         gap: 3em;
     }

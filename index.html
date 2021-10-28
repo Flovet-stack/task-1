@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | LemonWares</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- custom css styles  -->
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -46,26 +52,57 @@
     <div class="hero">
       <div class="con">
         <div class="sec-1">
-          <div>
-            <nav>
-              <ul>
-                <li class="active">Hosting</li>
-                <li>Domain</li>
-                <li>SEO</li>
-                <li>Email</li>
-              </ul>
-            </nav>
-            <div class="content">
-              <div id="hosting">
-                <h1>Premium Web Hosting for Your Website</h1>
-                <p>
-                  Blazing fast web hosting for individuals and businesses of all
-                  sizes backed by 24x7x365 Support.
-                </p>
-                <div class="btns">
-                  <a href="" class="btn btn-primary">Create an Account</a>
-                  <a href="" class="btn btn-border">Choose your plan</a>
-                </div>
+          <div class="nav">
+            <ul>
+              <li to="hosting" class="tab active">Hosting</li>
+              <li to="domain" class="tab">Domain</li>
+              <li to="seo" class="tab">SEO</li>
+              <li to="email" class="tab">Email</li>
+            </ul>
+          </div>
+          <div class="content">
+            <div class="content-sub active" id="hosting">
+              <h1>Premium Web Hosting for Your Website</h1>
+              <p>
+                Blazing fast web hosting for individuals and businesses of all
+                sizes backed by 24x7x365 Support.
+              </p>
+              <div class="btns">
+                <a href="" class="btn btn-primary">Create an Account</a>
+                <a href="" class="btn btn-border">Choose your plan</a>
+              </div>
+            </div>
+            <div class="content-sub" id="domain">
+              <h1>Premium Web Domain for Your Website</h1>
+              <p>
+                Blazing fast web hosting for individuals and businesses of all
+                sizes backed by 24x7x365 Support.
+              </p>
+              <div class="btns">
+                <a href="" class="btn btn-primary">Create an Account</a>
+                <a href="" class="btn btn-border">Choose your plan</a>
+              </div>
+            </div>
+            <div class="content-sub" id="seo">
+              <h1>Premium Web SEO for Your Website</h1>
+              <p>
+                Blazing fast web hosting for individuals and businesses of all
+                sizes backed by 24x7x365 Support.
+              </p>
+              <div class="btns">
+                <a href="" class="btn btn-primary">Create an Account</a>
+                <a href="" class="btn btn-border">Choose your plan</a>
+              </div>
+            </div>
+            <div class="content-sub" id="email">
+              <h1>Premium Web Email for Your Website</h1>
+              <p>
+                Blazing fast web hosting for individuals and businesses of all
+                sizes backed by 24x7x365 Support.
+              </p>
+              <div class="btns">
+                <a href="" class="btn btn-primary">Create an Account</a>
+                <a href="" class="btn btn-border">Choose your plan</a>
               </div>
             </div>
           </div>
@@ -162,16 +199,16 @@
     <!-- start of the pricing section  -->
     <section class="pricing-section">
       <div class="con">
-          <div class="top">
-            <h3>Ready to get started with Lemon Wares?</h3>
-            <p>Choose the package that suits you</p>
+        <div class="top">
+          <h3>Ready to get started with Lemon Wares?</h3>
+          <p>Choose the package that suits you</p>
         </div>
         <div class="toggler-con">
-            <div class="time">Monthly</div>
-            <div class="toggler">
-                <div class="toggler-sub"></div>
-            </div>
-            <div class="time">Annual</div>
+          <div class="time">Monthly</div>
+          <div class="toggler">
+            <div class="toggler-sub"></div>
+          </div>
+          <div class="time">Annual</div>
         </div>
         <nav>
           <ul>
@@ -182,7 +219,10 @@
         <div class="plans">
           <div class="plan">
             <h4>Starter</h4>
-            <p>with all your customers via all conversation channels in one central dashboard.</p>
+            <p>
+              with all your customers via all conversation channels in one
+              central dashboard.
+            </p>
             <div class="price">
               <h3>$2.80</h3>
               <p>per month</p>
@@ -202,7 +242,10 @@
           </div>
           <div class="plan">
             <h4>Standard</h4>
-            <p>with all your customers via all conversation channels in one central dashboard.</p>
+            <p>
+              with all your customers via all conversation channels in one
+              central dashboard.
+            </p>
             <div class="price">
               <h3>$4.20</h3>
               <p>per month</p>
@@ -222,7 +265,10 @@
           </div>
           <div class="plan">
             <h4>Suprem</h4>
-            <p>with all your customers via all conversation channels in one central dashboard.</p>
+            <p>
+              with all your customers via all conversation channels in one
+              central dashboard.
+            </p>
             <div class="price">
               <h3>$7.00</h3>
               <p>per month</p>
@@ -432,5 +478,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
