@@ -402,7 +402,76 @@ header .nav-toggler.show span:last-child {
 }
 
 /* large screens and larger */
-@media screen and (min-width: 1225px) {}
+@media screen and (min-width: 1225px) {
+    header .logo {
+        height: 45px;
+    }
+    header nav {
+        position: relative;
+        top: 0;
+        left: 0;
+        background-color: var(--white);
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 4;
+        padding: 0 2em;
+        margin: 0 1em;
+        width: 100%;
+        border-top: none;
+        border-right: 1px solid var(--border-color);
+    }
+    
+    header nav::after {
+        display: none;
+    }
+    header nav ul {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    header nav ul li {
+        margin: 0 .5em;
+    }
+    header nav a {
+        display: block;
+        font-size: 1em;
+        padding: .3em 0;
+        border-bottom: none;
+        position: relative;
+        width: fit-content;
+        font-weight: 600;
+    }
+    header nav a::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: var(--primary);
+        transition-duration: 0.3s;
+    }
+    header nav a.active::after,
+    header nav a:hover::after {
+        width: 70%;
+        transition-duration: 0.3s;
+    }
+    header .con > div {
+        display: flex;
+        align-items: center;
+    }
+    header .contact {
+        font-weight: 600;
+    }
+    header .nav-toggler {
+        display: none;
+    }
+}
 
 /* start of home hero styles  */
 .hero {
