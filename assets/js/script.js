@@ -1,12 +1,12 @@
 // Creating the hero tabs functionality
-let contents = document.getElementsByClassName("content-sub");
-contents = Array.from(contents);
 let tabs = document.getElementsByClassName("tab");
 tabs = Array.from(tabs);
-let contentReset = () => {
+let contentReset = (parent) => {
   //function to hide all the contents
-  contents.forEach((content) => {
-    content.style.display = "none";
+  let contents = parent.getElementsByClassName("content-sub");
+  contents = Array.from(contents);
+  contents.forEach(content => {
+    content.style.display = 'none';
   });
 };
 let showContent = (target, content) => {
@@ -14,7 +14,7 @@ let showContent = (target, content) => {
   tabs.forEach((tab) => {
     tab.classList.remove("active");
   });
-  contentReset(); //call the reset function to hide all the contents
+  contentReset(content.parentElement); //call the reset function to hide all the contents
   target.classList.add("active");
   content.classList.add("fade-in");
   content.style.display = "block";
@@ -40,6 +40,7 @@ toggler.addEventListener("click", () => {
   if (toggler.classList.contains("toggle")) {
     monthly.style.display = "none";
     annually.style.display = "block";
+    annually.classList.add("fade-in");
     annually.children[0].children[1].style.display = "block";
     annually.children[0].children[0].children[0].children[0].classList.add(
       "active"
@@ -47,6 +48,7 @@ toggler.addEventListener("click", () => {
   } else {
     annually.style.display = "none";
     monthly.style.display = "block";
+    monthly.classList.add("fade-in");
     monthly.children[0].children[1].style.display = "block";
     monthly.children[0].children[0].children[0].children[0].classList.add(
       "active"
