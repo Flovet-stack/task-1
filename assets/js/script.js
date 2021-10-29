@@ -37,15 +37,27 @@ toggler.addEventListener("click", () => {
   } else {
     toggler.classList.add("toggle");
   } //change toggler animation class
-  if(toggler.classList.contains('toggle')) {
-      monthly.style.display = 'none';
-      annually.style.display = 'block';
-      annually.children[1].style.display = 'block';
-      annually.children[0].children[0].children[0].classList.add('active');
+  if (toggler.classList.contains("toggle")) {
+    monthly.style.display = "none";
+    annually.style.display = "block";
+    annually.children[0].children[1].style.display = "block";
+    annually.children[0].children[0].children[0].children[0].classList.add(
+      "active"
+    );
   } else {
-      annually.style.display = "none";
-      monthly.style.display = "block";
-      monthly.children[1].style.display = 'block'
-      monthly.children[0].children[0].children[0].classList.add('active');
+    annually.style.display = "none";
+    monthly.style.display = "block";
+    monthly.children[0].children[1].style.display = "block";
+    monthly.children[0].children[0].children[0].children[0].classList.add(
+      "active"
+    );
   }
+});
+
+// creating the mobile navigator toggler
+let navToggler = document.querySelector(".nav-toggler");
+let nav = document.querySelector("header nav");
+navToggler.addEventListener("click", () => {
+  navToggler.classList.toggle("show");
+  nav.classList.toggle("show");
 });

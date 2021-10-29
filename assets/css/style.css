@@ -208,12 +208,25 @@ section {
     }
 }
 
+@keyframes slide-top {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-30px);
+    }
+}
+
 .fade-in {
     animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 .fade-out {
     animation: fade-out 1s ease-out both;
+}
+
+.slide-top {
+    animation: slide-top 2s infinite alternate both;
 }
 
 
@@ -251,8 +264,145 @@ section {
 
 /* header styles  */
 header {
-    display: none;
+    width: 100%;
+    height: 50px;
+    background-color: var(--white);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 4;
+    display: flex;
+    align-items: center;
 }
+header .con {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo {
+    height: 35px;
+}
+header nav {
+    position: fixed;
+    top: 50px;
+    left: -100%;
+    background-color: var(--white);
+    height: calc(100% - 50px);
+    z-index: 4;
+    padding: 1em;
+    width: 80%;
+    border-top: 1px solid var(--border-color);
+}
+
+header nav.show {
+    left: 0;
+}
+
+header nav::after {
+    content: '';
+    display: block;
+    width: 20%;
+    height: calc(100% - 50px);
+    background-color: rgba(0, 0, 0, 0.479);
+    position: fixed;
+    z-index: 3;
+    right: 100%;
+    top: 50px;
+}
+header nav.show::after {
+    right: 0;
+    transition-duration: .3s;
+}
+header nav a {
+    display: block;
+    width: 100%;
+    font-size: 1em;
+    padding: 1em 0;
+    border-bottom: 1px solid var(--border-color);
+}
+header .con > div {
+    display: flex;
+    align-items: center;
+}
+
+header .contact {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+header .contact img {
+    width: 20px;
+    margin-right: 0.3em;
+    margin-top: 0.3em;
+}
+header .nav-toggler {
+    width: 30px;
+    height: 20px;
+    position: relative;
+}
+
+header .nav-toggler span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--text);
+    position: absolute;
+}
+
+header .nav-toggler.show {
+    width: 25px;
+
+}
+
+header .nav-toggler span:first-child {
+    top: 0;
+}
+
+header .nav-toggler span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header .nav-toggler span:last-child {
+    bottom: 0;
+}
+header .nav-toggler.show span:first-child {
+    top: 35% ;
+    transform: rotate(45deg) !important;
+}
+
+header .nav-toggler.show span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+header .nav-toggler.show span:last-child {
+    bottom: 50% !important;
+    transform: rotate(-45deg);
+}
+
+/* medium size screens (tablets)and larger */
+@media screen and (min-width: 768px) {
+    header {
+        height: 60px;
+    }
+    header nav {
+        top: 60px;
+        height: calc(100% - 60px);
+        z-index: 4;
+        padding: 2em;
+        width: 60%;
+    }
+    header nav::after {
+        width: 40%;
+        height: calc(100% - 60px);
+        top: 60px;
+    }
+}
+
+/* large screens and larger */
+@media screen and (min-width: 1225px) {}
 
 /* start of home hero styles  */
 .hero {
@@ -419,12 +569,14 @@ header {
     left: -15px;
     top: 60%;
     width: 30px;
+    animation-delay: .5s;
 }
 
 .hero .sec-2 img.abstract.img-2 {
     right: -10px;
     top: 10%;
     width: 30px;
+    animation-delay: 1.5s;
 }
 
 .hero .sec-2 img.abstract.img-3 {
@@ -706,6 +858,7 @@ header {
     left: -15px;
     top: 60%;
     width: 30px;
+    animation-delay: .8s;
 }
 
 .jumbotron>img.abstract.img-2 {
@@ -718,6 +871,7 @@ header {
     right: -15px;
     top: 80%;
     width: 50px;
+    animation-delay: 1.3s;
 }
 
 /* medium size screens (tablets)and larger */
@@ -1121,6 +1275,7 @@ footer .footer-bottom .con p span {
 .pricing-section .toggler-con .toggler.toggle .toggler-sub {
     left: calc(100% - 30px);
 }
+
 .pricing-section .toggler-con .time {
     font-size: 1.1em;
 }
@@ -1182,12 +1337,15 @@ footer .footer-bottom .con p span {
 #annually {
     display: none;
 }
+
 .pricing-section .content-sub {
     display: none;
 }
+
 .pricing-section .content-sub.active {
     display: block;
 }
+
 .pricing-section .plans .plan {
     width: 100%;
     height: auto;
